@@ -64,7 +64,17 @@ export default {
   },
   methods: {
     searchProfessioanls() {
-
+      let id = this.selects.specialtie;
+      //this.overlay = true;
+      this.$http
+        .post(`/professional/list`, {
+          params: {
+            id: id
+          }
+        })
+        .then((res) => {
+          console.log(res.data)
+        });
     },
   },
   computed: {
