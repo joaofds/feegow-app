@@ -1,24 +1,29 @@
-# feegow-app
+# Desafio de Front-end feegow
 
 ## Project setup
+
+```
+git clone https://github.com/joaofds/feegow-app.git
+```
+
+## Navegar para o projeto
+
+```
+cd feegow-api
+```
+
+## Instalar as dependencias com o NPM
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compilar e rodar servidor
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### API desenvolvida para o teste
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Veja aqui -> (https://github.com/joaofds/feegow-api).
