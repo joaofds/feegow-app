@@ -9,12 +9,14 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "axios": "^0.18.1",
     "core-js": "^3.8.3",
     "element-ui": "^2.15.6",
     "vue": "^2.6.14",
+    "vue-moment": "^4.1.0",
     "vue-router": "^3.5.1",
     "vuetify": "^2.6.0",
-    "axios": "^0.18.1"
+    "vuetify-js-utils": "^0.5.10"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
