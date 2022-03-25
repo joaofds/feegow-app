@@ -38,7 +38,7 @@
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item
+        <v-list-item @click="$router.push({ path: item.route })"
           v-for="item in menuItens" :key="item.title" link>
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -67,8 +67,8 @@ export default {
     return {
         drawer: null,
         menuItens: [
-          { title: 'Home', icon: 'mdi-view-dashboard' },
-          { title: 'About', icon: 'mdi-forum' },
+          { title: 'Home', icon: 'mdi-view-dashboard', route: '/' },
+          { title: 'About', icon: 'mdi-forum', route: '/about-me' },
         ],
     } 
   },

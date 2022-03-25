@@ -198,7 +198,7 @@ export default {
   mounted() {
 
     // busca especialidades
-    this.widgets.overlay = true;
+    this.widgets.overlay = true
     this.$http
       .post(`/specialties/list`)
       .then((res) => {
@@ -206,6 +206,8 @@ export default {
       })
       .catch((err) => {
         console.log(err)
+        this.widgets.overlay = true
+        
       });
     
     
@@ -220,6 +222,7 @@ export default {
       })
       .catch((err) => {
         console.log(err)
+        this.widgets.overlay = true
       });
   },
   watch: {
@@ -287,6 +290,7 @@ export default {
         })
         .catch((err) => {
           console.log(err)
+          this.widgets.overlay = true;
         });
     },
     getTableDataRow(data) {
@@ -300,30 +304,33 @@ export default {
     },
     // Envia form de consulta
     save() {
-      this.dialog = true
       this.$http
         .post('/patient/appointment', this.formData)
         .then((res) => {
-          console.log(res.data);
+          console.log(res.data)
         })
         .then(() => {
-          this.dialog = false
+          setTimeout(() => {
+            this.widgets.text = 'Solicitação enviada!'
+            this.widgets.snackbar = true
+          }, 1000)
         })
         .catch((err) => {
           console.log(err)
+          this.widgets.text = 'Ooops... algo errado aconteceu!'
+          this.widgets.snackbar = true
       });
 
       this.widgets.dialog = false
-      this.widgets.text = 'Solicitação enviada!'
-      this.widgets.snackbar = true
+      this.reset
+
     },
     saveNewDate(date) {
         this.$refs.menu.save(date)
     },
     reset() {
-        this.name = '',
-        this.cpf = '',
-        this.activePicker = null,
+        this.name = ''
+        this.cpf = ''
         this.selects.how = null
     },
     validarCpf(cpf) {
