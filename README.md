@@ -9,7 +9,7 @@ git clone https://github.com/joaofds/feegow-app.git
 ## Navegar para o projeto
 
 ```
-cd feegow-api
+cd feegow-app
 ```
 
 ## Instalar as dependencias com o NPM
